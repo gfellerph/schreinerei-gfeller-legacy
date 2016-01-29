@@ -1,0 +1,12 @@
+// Map background colors and colors to classes
+// and define colors for each background
+@each $name, $background, $color in $color-map {
+	.bg-#{$name} {
+		background-color: $background;
+		color: $color;
+	}
+
+	.color-#{$name} {
+		color: $color;
+	}
+}

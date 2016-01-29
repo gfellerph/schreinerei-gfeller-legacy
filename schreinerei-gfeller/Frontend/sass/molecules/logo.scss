@@ -1,0 +1,25 @@
+.logo {
+	margin: 0;
+
+	span {
+		@extend .sr-only;
+	}
+
+	a {
+		display: block;
+
+		&:before,
+		&:after {
+			content: none;
+		}
+	}
+
+	img {
+		height: $header-height * 0.8;
+		display: block;
+
+		@include max(xs) {
+			display: none;
+		}
+	}
+}

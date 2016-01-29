@@ -1,0 +1,38 @@
+nav {
+	ul {
+		padding-left: 0;
+		list-style: none;
+		margin: 0 0 0 2em;
+
+		@extend .clearfix;
+	}
+
+	li {
+		float: left;
+		margin-left: 3vw;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&.undertaker {
+			float: right;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 10px 0;
+		color: $green;
+		font-family: $light;
+		font-size: 2rem;
+	}
+
+	&.main {
+		width: 100%;
+
+		a {
+			color: $green;
+		}
+	}
+}
