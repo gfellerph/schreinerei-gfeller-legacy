@@ -7,18 +7,17 @@
 	@include max(xs) {
 		display: block;
 	}
+}
 
-	label & {
-		margin-left: auto;
+#wrapper {
+	@include max(xs) {
+		transition: transform 500ms;
+		transform: translateY(0);	
 	}
-}
 
-input.nav-toggler {
-	@extend .sr-only;
-}
-
-label.nav-toggler {
-	.nav-toggler:checked ~ & {
-		color: white;
+	.nav-open &{
+		@include max(xs) {
+			transform: translateY(50vh);
+		}
 	}
 }

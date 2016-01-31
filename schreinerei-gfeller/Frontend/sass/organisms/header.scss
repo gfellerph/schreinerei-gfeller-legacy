@@ -5,10 +5,15 @@ header.main {
 	width: 100%;
 	background: $white;
 	border-bottom: 1px solid black;
+	z-index: 1;
 	
 	> .container {
 		display: flex;
 		align-items: center;
 		height: $header-height;
+	}
+
+	@include max(xs) {
+		box-shadow: 0 -10px 30px -10px black;
 	}
 }

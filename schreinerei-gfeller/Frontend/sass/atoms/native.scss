@@ -11,6 +11,28 @@ body {
 	line-height: $line-height;
 	color: $anthracite;
 	padding-top: $header-height;
+	overflow-y: scroll;
+	background-color: $anthracite;
+
+	@include max(xs) {
+		padding-top: 0;
+	}
+}
+
+main {
+	position: relative;
+
+	@extend .clearfix;
+}
+
+#wrapper {
+	min-height: 100vh;
+
+	@include max(xs) {
+		background: white;
+		position: relative;
+		padding-top: $header-height;
+	}
 }
 
 h1,

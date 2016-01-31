@@ -13,8 +13,9 @@
 </head>
 <body>
     <div id="wrapper">
-        
         @Html.Partial("~/Views/Shared/_Header.cshtml")
+
+        @RenderSection("background", required:false)
 
         <main>
             @RenderBody()
