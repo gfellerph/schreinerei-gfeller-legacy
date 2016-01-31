@@ -1,10 +1,40 @@
 nav {
+
+	@include max(xs) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.9);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 1;
+		transition: opacity 500ms,
+					visibility 0s 500ms;
+
+		.nav-toggler:checked ~ & {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 500ms,
+						visibility 0s;
+		}
+	}
+
 	ul {
 		padding-left: 0;
 		list-style: none;
 		margin: 0 0 0 2em;
 
 		@extend .clearfix;
+
+		@include max(xs) {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: 0;
+			transform: translate(-50%, -50%);
+		}
 	}
 
 	li {
@@ -17,6 +47,29 @@ nav {
 
 		&.undertaker {
 			float: right;
+
+			@include max(xs) {
+				float: none;
+			}
+		}
+
+		@include max(xs) {
+			margin: 1em 0;
+			float: none;
+			text-align: center;
+			opacity: 0;
+			transform: translateY(-400%);
+			transition: transform 500ms, opacity 500ms;
+
+			&:nth-child(3) { transition-delay: 50ms; }
+			&:nth-child(2) { transition-delay: 100ms; }
+			&:nth-child(1) { transition-delay: 150ms; }
+			&:nth-child(0) { transition-delay: 200ms; }
+
+			.nav-toggler:checked ~ & {
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 	}
 
@@ -26,13 +79,19 @@ nav {
 		color: $green;
 		font-family: $light;
 		font-size: 2rem;
+
+		@include max(xs) {
+			color: white;
+			font-family: $bold;
+
+			&:before,
+			&:after {
+				background: white;
+			}
+		}
 	}
 
 	&.main {
 		width: 100%;
-
-		a {
-			color: $green;
-		}
 	}
 }
