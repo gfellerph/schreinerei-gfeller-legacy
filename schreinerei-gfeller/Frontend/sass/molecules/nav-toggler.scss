@@ -1,0 +1,24 @@
+.nav-toggler {
+	margin-left: auto;
+	display: none;
+	position: relative;
+	z-index: 2;
+
+	@include max(xs) {
+		display: block;
+	}
+
+	label & {
+		margin-left: auto;
+	}
+}
+
+input.nav-toggler {
+	@extend .sr-only;
+}
+
+label.nav-toggler {
+	.nav-toggler:checked ~ & {
+		color: white;
+	}
+}
