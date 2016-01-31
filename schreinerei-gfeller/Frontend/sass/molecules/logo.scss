@@ -17,9 +17,5 @@
 	img {
 		height: $header-height * 0.8;
 		display: block;
-
-		@include max(xs) {
-			display: none;
-		}
 	}
 }
