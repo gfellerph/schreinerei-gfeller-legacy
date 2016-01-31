@@ -23,7 +23,8 @@ a {
 			left: 50%;
 		}
 
-		&:hover {
+		&:hover,
+		&.active {
 			&:before,
 			&:after {
 				width: 50%;
