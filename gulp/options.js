@@ -68,7 +68,7 @@ var options = {
 		
 		options: {
 			nodeSass: {
-				includePaths: ['node_modules'],
+				includePaths: ['../../../node_modules/'],
 			},
 			autoprefixer: {
 				browsers: ['last 2 versions']
@@ -103,7 +103,7 @@ var options = {
 		// Set resolve paths
 		resolve: {
 			extensions: ['', '.js'],
-			root: path.resolve('./src/js')
+			root: path.resolve('./schreinerei-gfeller/Frontend/js')
 		},
 
 		// Destination folder
