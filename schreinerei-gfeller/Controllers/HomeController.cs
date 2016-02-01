@@ -26,5 +26,10 @@ namespace schreinerei_gfeller.Controllers
 
             return View();
         }
+
+        public ActionResult Styleguide()
+        {
+            return View();
+        }
     }
 }

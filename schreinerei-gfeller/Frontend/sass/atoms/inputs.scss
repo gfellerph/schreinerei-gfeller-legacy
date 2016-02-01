@@ -1,0 +1,26 @@
+label {
+    position: relative;
+
+    span {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 200ms;
+    }
+
+    input:focus,
+    input.has-content {
+        & + span {
+            font-size: 10px;
+            top: 0;
+            transform: translateY(-100%);
+        }
+    }
+}
+
+input[type="text"] {
+    border: none;
+
+    border-bottom: 1px solid $green;
+}

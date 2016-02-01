@@ -44,6 +44,7 @@
     "bootstrap-grid": "^1.1.1",
     "classlist": "^1.0.1",
     "domready": "^1.0.8",
+    "live-event": "^1.0.1",
     "normalize.css": "^3.0.3"
   }
 }

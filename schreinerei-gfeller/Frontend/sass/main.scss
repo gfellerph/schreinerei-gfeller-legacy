@@ -6,10 +6,12 @@
 
 // Atoms
 @import 'atoms/font';
-@import 'atoms/native';
-@import 'atoms/links';
 @import 'atoms/mappings';
 @import 'atoms/convenience';
+@import 'atoms/native';
+@import 'atoms/links';
+@import 'atoms/buttons';
+@import 'atoms/inputs';
 
 // Molecules
 @import 'molecules/logo';
