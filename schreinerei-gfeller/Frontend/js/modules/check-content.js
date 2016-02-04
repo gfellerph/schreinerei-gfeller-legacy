@@ -20,7 +20,9 @@ function toggleHasContent (event) {
 
 // Initialize & bind event handlers
 domready(function () {
-    var elements = document.querySelector('.check-content');
+    var elements = Array.prototype.slice.call(document.querySelectorAll('.check-content'));
 
-    elements.addEventListener('blur', toggleHasContent);
+    elements.map(function (input) {
+    	input.addEventListener('blur', toggleHasContent);
+    });
 });
