@@ -12,6 +12,7 @@
     @RenderSection("css", required:false)
 </head>
 <body>
+    @Html.Raw(File.ReadAllText(Server.MapPath("~/Assets/svg/svg-sprite.svg")))
     <div id="wrapper">
         @Html.Partial("~/Views/Shared/_Header.cshtml")
 

@@ -82,8 +82,8 @@ var options = {
 	svgSprite: {
 		src: source + '/svg/**/*.svg',
 		dest: './',
-		svgDest: source + '/jade/shared/svg-sprite.svg',
-		lessDest: source + '/less/core/svg-sprite.less',
+		svgDest: destination + '/svg/svg-sprite.svg',
+		lessDest: source + '/sass/core/svg-sprite.scss',
 		htmlDest: destination + '/svg-sprite.html'
 	},
 

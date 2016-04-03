@@ -49,12 +49,15 @@
 
   .glyphmap(){
     .font-styling();
-    & when (@class = mxm){ content: "\EA01" }
+    & when (@class = facebook){ content: "\EA01" }
+    & when (@class = google-plus){ content: "\EA02" }
     
   }
 }
 
-.gfx-mxm:before { content: "\EA01" }
+.gfx-facebook:before { content: "\EA01" }
+.gfx-google-plus:before { content: "\EA02" }
 
 
-.after.gfx-mxm:after { content: "\EA01" }
+.after.gfx-facebook:after { content: "\EA01" }
+.after.gfx-google-plus:after { content: "\EA02" }
