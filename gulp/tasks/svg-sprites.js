@@ -19,7 +19,7 @@ var createSprite = function () {
 					inline: true,
 					sprite: options.svgDest,
 					render: {
-						less: {
+						scss: {
 							dest: options.lessDest
 						}
 					},
