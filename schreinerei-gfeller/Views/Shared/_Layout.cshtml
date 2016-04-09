@@ -7,8 +7,10 @@
     <title>@ViewBag.Title - Schreinerei Gfeller</title>
 
     @*  CSS *@
-    <link href="~/res/16x16/favicon.png" rel="icon" type="image/png">
+    <link href="~/favicon.png" rel="icon" type="image/png">
     <link href="~/Assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" type="text/css"/>
+    
     @RenderSection("css", required:false)
 </head>
 <body>
@@ -26,7 +28,8 @@
     </div>
 
     @*  JS  *@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
     <script src="/Assets/js/app.js"></script>
     @RenderSection("js", required:false)
 </body>
