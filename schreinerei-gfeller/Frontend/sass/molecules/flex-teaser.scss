@@ -1,0 +1,9 @@
+.flex-teaser {
+	display: flex;
+	flex-wrap: wrap;
+
+	.flex-teaser--bottom {
+		width: 100%;
+		align-self: flex-end;
+	}
+}
