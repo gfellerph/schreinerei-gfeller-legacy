@@ -13,6 +13,15 @@
 .bigger { font-size: 1.15em; }
 .smaller { font-size: 0.85em; }
 
+.module {
+	*:first-child { margin-top: 0; }
+	*:last-child { margin-bottom: 0; }
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
 .fill {
 	top: 0;
 	left: 0;

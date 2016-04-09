@@ -1,11 +1,9 @@
 .box {
     padding: 2rem;
 
-    > *:first-child {
-        margin-top: 0;
+    &.box--big {
+    	padding: 5rem;
     }
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+    @extend .module;
 }

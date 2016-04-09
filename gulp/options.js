@@ -106,6 +106,10 @@ var options = {
 			root: path.resolve('./schreinerei-gfeller/Frontend/js')
 		},
 
+		externals: {
+			'jquery': 'jQuery'
+		},
+
 		// Destination folder
 		output: {
 			path: destination + '/js/',
