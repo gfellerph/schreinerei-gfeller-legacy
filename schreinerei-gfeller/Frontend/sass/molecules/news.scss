@@ -1,0 +1,45 @@
+.news {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding: 1rem;
+		transition: background 200ms;
+
+		&:hover {
+			background: $smoke;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	h2 {
+		margin: 0;
+
+	}
+
+	article {
+		display: flex;
+	}
+
+	time {
+		text-transform: uppercase;
+		font-family: $light;
+		color: $grey;
+
+		span {
+			display: block;
+		}
+	}
+}
+
+.news--day {
+	font-size: 3rem;
+}
