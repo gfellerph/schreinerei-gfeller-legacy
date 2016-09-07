@@ -7,7 +7,8 @@ $blue: rgb(0,173,255);
 $anthracite: rgb(50,50,50);
 $white: white;
 $black: black;
-$color-map: (('grey', $grey, $white),('green', $green, $white),('light-green', $light-green, $anthracite),('brown', $brown, $white),('blue', $blue, $white),('anthracite', $anthracite, $white),('white', $white, $anthracite),('black', $black, $white));
+$smoke: rgba(200,200,200, 0.5);
+$color-map: (('smoke', $smoke, $white),('grey', $grey, $white),('green', $green, $white),('light-green', $light-green, $anthracite),('brown', $brown, $white),('blue', $blue, $white),('anthracite', $anthracite, $white),('white', $white, $anthracite),('black', $black, $white));
 
 // Font
 $font-size: 15px;

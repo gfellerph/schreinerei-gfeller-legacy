@@ -27,8 +27,8 @@ namespace schreinerei_gfeller
 
             routes.MapRoute(
                 name: "ProductDetails",
-                url: "Produkte/Detail/{id}",
-                defaults: new { controller = "Products", action = "Detail", id = -1 }
+                url: "Produkte/{product}",
+                defaults: new { controller = "Products", action = "Detail", product = "Kitchens" }
             );
 
             routes.MapRoute(
