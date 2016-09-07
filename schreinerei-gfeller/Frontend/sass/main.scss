@@ -1,1 +1,11 @@
-@import '../../../node_modules/normalize.css/normalize';
+// @import '../../../node_modules/normalize.css/normalize';
+
+@import 'core/variables';
+@import 'core/mixins';
+
+@import 'atoms/native';
+@import 'atoms/text';
+@import 'atoms/grid';
+@import 'atoms/flex';
+
+@import 'organisms/image-slider';

@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Schreinerei Gfeller</title>
+
     @* CSS *@
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="~/Assets/css/main.css" rel="stylesheet" type="text/css"/>
@@ -11,10 +12,34 @@
     @RenderSection("css", required:false)
 </head>
 <body>
-    <main>
-        <aside></aside>
-        <section class="content">
-            @RenderBody()
+    <main class="row">
+        <aside ratio="smaller" class="image-slider">
+            <div ratio="smaller" class="splash" style="background-image:url(/Assets/img/locker.jpg);"></div>
+        </aside>
+        <section class="flex flex-wrap" ratio="bigger">
+            <div ratio="bigger" class="content">
+                @RenderBody()
+            </div>
+            <footer class="large-content flex-end">
+                <hr>
+                <div columns="3">
+                    <p>
+                        Schreinerei Gfeller
+                        <br>
+                        Sumiswaldstrasse 73
+                        <br>
+                        3452 Grünenmatt
+                    </p>
+                    <p>
+                        Tel 034 431 10 91
+                        <br>
+                        Fax 034 431 26 60
+                    </p>
+                    <p>
+                        <a href="#">info@schreinerei-gfeller.ch</a>
+                    </p>
+                </div>
+            </footer>
         </section>
     </main>
     @*  JS  *@
