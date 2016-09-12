@@ -1,3 +1,6 @@
-require('modules/navigation');
-require('modules/check-content');
-require('modules/slick-slider');
+import Slider from 'modules/slider';
+
+window.addEventListener('load', function () {
+    const imageSlider = new Slider('.slider');
+
+});

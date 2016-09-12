@@ -102,18 +102,30 @@ var options = {
 
 		// Set resolve paths
 		resolve: {
-			extensions: ['', '.js'],
-			root: path.resolve('./schreinerei-gfeller/Frontend/js')
-		},
-
-		externals: {
-			'jquery': 'jQuery'
+			extensions: ['', '.js', '.vue'],
+			root: [path.resolve(source + '/js')],
+			alias: {
+				'modules': path.resolve(__dirname, '../schreinerei-gfeller/Frontend/js/modules'),
+			},
 		},
 
 		// Destination folder
 		output: {
 			path: destination + '/js/',
 			publicPath: webroot
+		},
+
+		module: {
+			loaders: [
+				{
+					test: /\.js$/,
+					loader: 'babel-loader',
+					exclude: /node_modules/,
+					query: {
+						presets: ['es2015']
+					}
+				}
+			]
 		},
 
 		// Use common chunks plugin?

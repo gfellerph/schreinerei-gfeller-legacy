@@ -13,14 +13,22 @@
 </head>
 <body>
     <main class="row">
-        <aside ratio="smaller" class="image-slider">
-            <div ratio="smaller" class="splash" style="background-image:url(/Assets/img/wood.jpg);">
-                <div class="button-wrapper">
-                    <button class="open-slider">Galerie</button>
-                </div>
+        <aside ratio="smaller" class="aside">
+            <div class="slider off">
+                <div class="slide cover-image active" style="background-image:url(/Assets/img/wood.jpg);"></div>
+                <div class="slide cover-image" style="background-image:url(/Assets/img/wood.jpg);"></div>
+                <div class="slide cover-image" style="background-image:url(/Assets/img/wood.jpg);"></div>
+                <div class="slide cover-image" style="background-image:url(/Assets/img/wood.jpg);"></div>
+                <div class="slide cover-image" style="background-image:url(/Assets/img/wood.jpg);"></div>
+                <button class="prev"><</button>
+                <button class="next">></button>
+            </div>
+            <div class="button-wrapper">
+                <button class="open-slider">Galerie</button>
             </div>
         </aside>
         <section class="flex flex-wrap" ratio="bigger">
+            <a href="/" class="logo"><img src="/Assets/img/logo.png" alt="Logo Schreinerei Gfeller"></a>
             <nav class="main-nav" ratio="bigger">
                 <a href="/">Schreinerei</a>
                 <a href="/bestattungen">Bestattungen</a>

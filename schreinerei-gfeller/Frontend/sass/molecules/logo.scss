@@ -1,18 +1,8 @@
 .logo {
-	margin: 0;
-
-	span {
-		@extend .sr-only;
-	}
-
-	a {
-		display: block;
-
-		&:before,
-		&:after {
-			content: none;
-		}
-	}
+	display: block;
+	position: absolute;
+	top: 50px;
+	right: 50px;
 
 	img {
 		width: 15rem;

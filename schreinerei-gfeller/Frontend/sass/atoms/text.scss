@@ -2,10 +2,13 @@ html {
   font-size: 10px;
 }
 
+body {
+  font-family: 'Droid Sans', sans-serif;
+}
+
 body,
 h2 {
   line-height: 1.5em;
-  font-family: 'Droid Serif', serif;
   font-size: 1.4rem;
 
   @include min($xxs) {
@@ -29,6 +32,13 @@ h1 {
   @include min($l) {
     font-size: 6.4rem;
   }
+}
+
+h1,
+h2,
+.lead,
+nav {
+  font-family: 'Droid Serif', serif;
 }
 
 .lead {
