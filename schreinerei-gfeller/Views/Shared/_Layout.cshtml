@@ -14,9 +14,17 @@
 <body>
     <main class="row">
         <aside ratio="smaller" class="image-slider">
-            <div ratio="smaller" class="splash" style="background-image:url(/Assets/img/locker.jpg);"></div>
+            <div ratio="smaller" class="splash" style="background-image:url(/Assets/img/wood.jpg);">
+                <div class="button-wrapper">
+                    <button class="open-slider">Galerie</button>
+                </div>
+            </div>
         </aside>
         <section class="flex flex-wrap" ratio="bigger">
+            <nav class="main-nav" ratio="bigger">
+                <a href="/">Schreinerei</a>
+                <a href="/bestattungen">Bestattungen</a>
+            </nav>
             <div ratio="bigger" class="content">
                 @RenderBody()
             </div>

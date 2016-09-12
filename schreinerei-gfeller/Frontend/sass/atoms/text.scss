@@ -2,7 +2,8 @@ html {
   font-size: 10px;
 }
 
-body {
+body,
+h2 {
   line-height: 1.5em;
   font-family: 'Droid Serif', serif;
   font-size: 1.4rem;
@@ -41,5 +42,26 @@ h1 {
 
   @include min($l) {
     font-size: 2.4rem;
+  }
+}
+
+.block-link {
+  display: block;
+  margin: 0.5em 0;
+}
+
+h2 {
+  font-size: inherit;
+  font-weight: 700;
+
+  &:after {
+    content: " \2014";
+  }
+}
+
+article {
+  h2,
+  p {
+    margin: 0.5em 0;
   }
 }
