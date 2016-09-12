@@ -9,6 +9,7 @@
         width: 50%;
         overflow: hidden;
         transform: translate3d(0,0,0);
+        z-index: 1;
     }
 
     .open-slider {
@@ -24,9 +25,10 @@
         transform: translateY(100%);
         transition: transform 400ms;
         will-change: transform;
+        outline: none;
     }
 
-    &:hover .open-slider {
+    &:hover .slider.off ~ .button-wrapper .open-slider {
         transform: translateY(0);
     }
 }

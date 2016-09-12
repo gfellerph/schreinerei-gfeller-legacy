@@ -1,8 +1,9 @@
 export default class Slider {
     constructor(selector) {
         if (!selector) selector = '.slider';
-        this.activeSlide = document.querySelector(selector)
-            .querySelector('.slide.active');
+        const $slider = document.querySelector(selector);
+
+        this.activeSlide = $slider.querySelector('.slide.active');
     }
 
     prev () {
@@ -14,10 +15,10 @@ export default class Slider {
     }
 
     next () {
-        this.currentSlide.className = this.currentSlide.className
+        this.activeSlide.className = this.activeSlide.className
             .replace('active', '')
             .trim();
-        this.currentSlide.nextElementSibling.className += ' active';
-        this.currentSlide = this.currentSlide.nextElementSibling;
+        this.activeSlide.nextElementSibling.className += ' active';
+        this.activeSlide = this.activeSlide.nextElementSibling;
     }
 }
