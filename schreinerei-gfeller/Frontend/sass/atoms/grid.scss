@@ -15,6 +15,12 @@
   &[ratio='smaller'] {
     width: 100%/13*5;
   }
+
+  &[ratio~='mobile'] {
+    @include max($xs) {
+      width: 100%;
+    }
+  }
 }
 
 [columns] {
