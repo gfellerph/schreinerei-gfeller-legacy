@@ -12,63 +12,21 @@
     @RenderSection("css", required:false)
 </head>
 <body>
-    <main class="row">
-        <aside ratio="smaller mobile" class="aside">
-            <div class="slider off">
-                <div class="slide active">
-                    <div class="cover-image" style="background-image:url(/Assets/img/wood.jpg)"></div>
+    @Html.Partial("_Header")
+    <main class="container-fluid">
+        <div class="row">
+            <section class="col-sm-8 col-sm-offset-4">
+                <div class="content">
+                    @RenderBody()
                 </div>
-                <div class="slide">
-                    <div class="cover-image" style="background-image:url(/Assets/img/wood.jpg)"></div>
-                </div>
-                <div class="slide">
-                    <div class="cover-image" style="background-image:url(/Assets/img/wood.jpg)"></div>
-                </div>
-                <div class="slide">
-                    <div class="cover-image" style="background-image:url(/Assets/img/wood.jpg)"></div>
-                </div>
-                <div class="slide">
-                    <div class="cover-image" style="background-image:url(/Assets/img/wood.jpg)"></div>
-                </div>
-                <button class="prev"><</button>
-                <button class="next">></button>
-                <button class="close-slider">x</button>
-            </div>
-            <div class="button-wrapper">
-                <button class="open-slider">Galerie</button>
-            </div>
-        </aside>
-        <section class="flex flex-wrap" ratio="bigger mobile">
-            <a href="/" class="logo"><img src="/Assets/img/logo.png" alt="Logo Schreinerei Gfeller"></a>
-            <nav class="main-nav" ratio="bigger">
-                <a href="/">Schreinerei</a>
-                <a href="/bestattungen">Bestattungen</a>
-            </nav>
-            <div ratio="bigger" class="content">
-                @RenderBody()
-            </div>
-            <footer class="large-content flex-end">
-                <hr>
-                <div columns="3">
-                    <p>
-                        Schreinerei Gfeller
-                        <br>
-                        Sumiswaldstrasse 73
-                        <br>
-                        3452 Grünenmatt
-                    </p>
-                    <p>
-                        Tel 034 431 10 91
-                        <br>
-                        Fax 034 431 26 60
-                    </p>
-                    <p>
-                        <a href="#">info@schreinerei-gfeller.ch</a>
-                    </p>
-                </div>
-            </footer>
-        </section>
+            </section>
+        </div>
     </main>
+    <section class="cover">
+        <div class="cover--image" style="background-image:url(/Assets/img/wood.jpg)"></div>
+    </section>
+    @Html.Partial("_Footer")
+
     @*  JS  *@
     @RenderSection("js", required:false)
 </body>
