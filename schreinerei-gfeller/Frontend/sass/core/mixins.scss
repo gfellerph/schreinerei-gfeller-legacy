@@ -1,41 +1,44 @@
-@mixin max($media) {
-  @if $media == xxs {
-    @media only screen and (max-width: $xxs - 1) { @content; }
-  }
-  @else if $media == xs {
-    @media only screen and (max-width: $xs - 1) { @content; }
-  }
-  @else if $media == s {
-    @media only screen and (max-width: $s - 1) { @content; }
-  }
-  @else if $media == m {
-    @media only screen and (max-width: $m - 1) { @content; }
-  }
-  @else if $media == l {
-    @media only screen and (max-width: $l - 1) { @content; }
-  }
-  @else if $media == xl {
-    @media only screen and (max-width: $xl - 1) { @content; }
-  }
+/**
+ * Media query includes for max-width
+ * Usage: @include max($xs) { ... }
+ *
+ * @param  {Pixel} $media A breakpoint (see variables.scss)
+ * @return {void}
+ */
+@mixin max($max) {
+    @media only screen and (max-width: $max - 1) { @content; }
 }
 
-@mixin min($media) {
-  @if $media == xxs {
-    @media only screen and (min-width: $xxs) { @content; }
-  }
-  @else if $media == xs {
-    @media only screen and (min-width: $xs) { @content; }
-  }
-  @else if $media == s {
-    @media only screen and (min-width: $s) { @content; }
-  }
-  @else if $media == m {
-    @media only screen and (min-width: $m) { @content; }
-  }
-  @else if $media == l {
-    @media only screen and (min-width: $l) { @content; }
-  }
-  @else if $media == xl {
-    @media only screen and (min-width: $xl) { @content; }
+/**
+ * Media query for min-width and max-width
+ * Usage: @include between($s, $m) { ... }
+ *
+ * @param  {Pixel} $min Min screen size
+ * @param  {Pixel} $max Max screen size
+ * @return {void}
+ */
+@mixin between($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max - 1) { @content; }
+}
+
+/**
+ * Media query for min-width
+ * Usage: @include min($xs) { ... }
+ *
+ * @param  {Pixel} $media A breakpoint (see variables.scss)
+ * @return {void}
+ */
+@mixin min($min) {
+    @media only screen and (min-width: $min) { @content; }
+}
+
+@mixin color-classes($colors) {
+  @each $color_name, $color_value in $colors {
+    .#{$color_name}-background {
+      background-color: $color_value !important;
+    }
+    .#{$color_name}-text {
+      color: $color_value !important;
+    }
   }
 }

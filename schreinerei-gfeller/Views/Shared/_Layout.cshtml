@@ -1,36 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Schreinerei Gfeller</title>
 
-    @*  CSS *@
-    <link href="~/favicon.png" rel="icon" type="image/png">
+    @* CSS *@
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="~/Assets/css/main.css" rel="stylesheet" type="text/css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" type="text/css"/>
-    
+    <link href="~/favicon.png" rel="icon" type="image/png">
     @RenderSection("css", required:false)
 </head>
 <body>
-    @Html.Raw(File.ReadAllText(Server.MapPath("~/Assets/svg/svg-sprite.svg")))
-    <div id="wrapper">
-        @Html.Partial("~/Views/Shared/_Header.cshtml")
-
-        @RenderSection("background", required:false)
-
-        <main>
-            @RenderBody()
-        </main>
-
-        @Html.Partial("~/Views/Shared/_Footer.cshtml")
-    </div>
+    @Html.Partial("_Header")
+    <main class="container-fluid">
+        <div class="row">
+            <section class="col-sm-8 col-sm-offset-4">
+                <div class="content">
+                    @RenderBody()
+                </div>
+            </section>
+        </div>
+    </main>
+    <section class="cover">
+        <div class="cover--image" style="background-image:url(/Assets/img/wood.jpg)"></div>
+    </section>
+    @Html.Partial("_Footer")
 
     @*  JS  *@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
-    <script src="/Assets/js/app.js"></script>
     @RenderSection("js", required:false)
 </body>
 </html>

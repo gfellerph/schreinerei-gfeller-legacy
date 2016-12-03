@@ -1,29 +1,23 @@
-@import '../../../node_modules/normalize.css/normalize';
-@import '../../../node_modules/bootstrap-grid/grid.min';
+@import 'node_modules/normalize.css/normalize';
 
-@import 'core/variables';
 @import 'core/mixins';
-@import 'core/svg-sprite';
+@import 'core/variables';
 
-// Atoms
-@import 'atoms/font';
-@import 'atoms/mappings';
 @import 'atoms/convenience';
 @import 'atoms/native';
+@import 'atoms/layout';
+@import 'atoms/text';
+@import 'atoms/grid';
+@import 'atoms/flex';
 @import 'atoms/links';
-@import 'atoms/buttons';
-@import 'atoms/inputs';
 @import 'atoms/box';
-@import 'atoms/text-columns';
 
-// Molecules
-@import 'molecules/logo';
 @import 'molecules/navigation';
-@import 'molecules/nav-toggler';
-@import 'molecules/flex-grid';
-@import 'molecules/flex-teaser';
-@import 'molecules/slick-slider';
+@import 'molecules/cover-image';
+@import 'molecules/logo';
 @import 'molecules/news';
+@import 'molecules/products';
+@import 'molecules/breadcrumbs';
 
-// Organisms
-@import 'organisms/header';
+@import 'organisms/image-slider';
+@import 'organisms/aside';

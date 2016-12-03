@@ -1,21 +1,7 @@
 .logo {
-	margin: 0;
-
-	span {
-		@extend .sr-only;
-	}
-
-	a {
-		display: block;
-
-		&:before,
-		&:after {
-			content: none;
-		}
-	}
-
-	img {
-		width: 15rem;
-		display: block;
+	display: block;
+  
+  img {
+    width: 15rem;
 	}
 }
