@@ -46,9 +46,13 @@
   },
   "dependencies": {
     "bootstrap-grid": "^1.1.1",
+    "bootstrap-grid-light": "^1.1.0",
     "classlist": "^1.0.1",
     "domready": "^1.0.8",
     "live-event": "^1.0.1",
-    "normalize.css": "^3.0.3"
+    "mathsass": "^0.9.5",
+    "modularscale-sass": "^2.1.1",
+    "normalize.css": "^3.0.3",
+    "susy": "^2.2.12"
   }
 }
