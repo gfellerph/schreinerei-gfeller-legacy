@@ -1,6 +1,6 @@
-import Slider from 'modules/slider';
+// import Slider from 'modules/slider';
 
-window.addEventListener('load', function () {
+/*window.addEventListener('load', function () {
     const imageSlider = new Slider('.slider');
     const $slider = document.querySelector('.slider');
 
@@ -13,4 +13,4 @@ window.addEventListener('load', function () {
     document.querySelector('.close-slider').addEventListener('click', e => {
       $slider.className += ' off';
     });
-});
+});*/
