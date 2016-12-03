@@ -1,14 +1,14 @@
 .main-nav {
-	margin: 3em auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 
 	a {
 		font-style: italic;
-		font-size: 18px;
 		text-decoration: none;
 		color: black;
 		display: inline-block;
 
-		&:after {
+		&.active:after {
 			display: block;
 			width: 100%;
 			content: '';
@@ -16,7 +16,7 @@
 		}
 
 		& + a {
-			margin-left: 3em;
+			margin-left: 3rem;
 		}
 	}
 }
