@@ -1,28 +1,6 @@
-*, *:before, *:after {
-	box-sizing: border-box;
-}
-
-html {
-	height: 100%;
-}
-
-body {
-	margin: 0;
-	height: 100%;
-}
-
 img {
 	border: none;
 	max-width: 100%;
-}
-
-p {
-	margin: 1.5em 0;
-}
-
-strong,
-b {
-	font-weight: 700;
 }
 
 hr {
@@ -30,7 +8,20 @@ hr {
 	border-top: 1px solid black;
 }
 
-footer {
-	font-size: 1.2rem;
-	line-height: 1.5em;
+figcaption {
+  margin: 0.5em 0;
+  font-style: italic;
+  font-size: 1em / $bronze;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 2rem;
+  border-left: 3px solid $grey;
+  font-style: italic;
+
+  &:before,
+  &:after {
+    content: '"';
+  }
 }

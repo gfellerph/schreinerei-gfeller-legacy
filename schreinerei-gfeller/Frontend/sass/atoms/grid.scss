@@ -1,49 +1,5 @@
-.row {
-  min-height: 100%;
-  display: flex;
-}
+@import 'node_modules/bootstrap-grid-light/dist/bootstrap.min';
 
-.content {
-  margin: 0 auto;
-  //max-width: 54rem;
-}
-
-[ratio] {
-  &[ratio='bigger'] {
-    width: 100%/13*8;
-  }
-  &[ratio='smaller'] {
-    width: 100%/13*5;
-  }
-
-  &[ratio~='mobile'] {
-    @include max($xs) {
-      width: 100%;
-    }
-  }
-}
-
-[columns] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 1.5em;
-  
-  &[columns='2'] {
-    > * {
-      flex-basis: calc(50% - 1.5em/2);
-      margin: 0 0 1.5em 0;
-    }
-  }
-  &[columns='3'] {
-    > * {
-      flex-basis: calc(100%/3 - 1.5em/3);
-      margin: 0 0 1.5em 0;
-    }
-  }
-}
-
-.large-content {
-  width: 80%;
-  margin: 0 auto;
+.container-fluid {
+  width: 100%;
 }
