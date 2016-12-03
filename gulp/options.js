@@ -34,33 +34,6 @@ var options = {
 		src: source + '/static/**'
 	},
 
-	// Less to CSS
-	less: {
-
-		// Entry point. This can be an array of files for multiple bundles:
-		// main: ['src/less/main.less', 'src/less/bundle1.less'],
-		main: 'src/less/main.less',
-
-		// Files to watch for changes
-		src: source + '/less/**/*.less',
-
-		// Destination for .css files
-		dest: destination + '/css',
-
-		// Options for respective gulp-??? plugins
-		options: {
-			less: {
-				//paths: ''
-			},
-			autoprefixer: {
-				browsers: ['last 2 versions']
-			},
-			sourcemaps: {
-				sourceMappingURLPrefix: webroot + '/css'
-			}
-		}
-	},
-
 	sass: {
 		src: source + '/sass/**/*.scss',
 		main: source + '/sass/main.scss',
@@ -68,7 +41,7 @@ var options = {
 		
 		options: {
 			nodeSass: {
-				includePaths: ['../../../node_modules/'],
+				includePaths: ['node_modules'],
 			},
 			autoprefixer: {
 				browsers: ['last 2 versions']
@@ -164,7 +137,7 @@ var options = {
 
 		// Destination folder for the less files
 		// containing the mixin
-		lessDest: source + '/less/core/',
+		lessDest: source + '/sass/core/',
 
 		// Where the browser can find your font files
 		root: webroot + '/fonts'
