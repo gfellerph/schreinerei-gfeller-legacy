@@ -260,3 +260,18 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Umbraco
+*resharper.user
+[Dd]ebug/
+[Rr]elease/
+build/
+[Oo]bj/
+*.suo
+*.user
+*.sln.cache
+_ReSharper.*/
+*.userB
+Umbraco.Framework
+*.pyc
+desktop.ini

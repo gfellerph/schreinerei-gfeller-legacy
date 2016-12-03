@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+	var home = @CurrentPage.Site();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="@CurrentPage.siteDescription">
+    <title>@CurrentPage.Name - Schreinerei Gfeller</title>
+
+    @* CSS *@
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="~/Assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="~/favicon.png" rel="icon" type="image/png">
+    @RenderSection("css", required:false)
+	
+	<!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    @Html.Partial("_Header")
+    <main class="container-fluid">
+        <div class="row">
+            <section class="col-sm-8 col-sm-offset-4">
+                <div class="content">
+                    @RenderBody()
+                </div>
+            </section>
+        </div>
+    </main>
+    <section class="cover">
+        <div class="cover--image" style="background-image:url(/Assets/img/wood.jpg)"></div>
+    </section>
+    @Html.Partial("_Footer")
+
+    @*  JS  *@
+    @RenderSection("js", required:false)
+</body>
+</html>
